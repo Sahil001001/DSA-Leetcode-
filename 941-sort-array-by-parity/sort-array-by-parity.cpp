@@ -12,13 +12,13 @@ public:
             i++;
             j--;
           }
-          if(nums[i]%2==1 && nums[j]%2==1){
+          else if(nums[i]%2==1 && nums[j]%2==1){
             j--;
         }
-          if(nums[i]%2==0 && nums[j]%2==1){
+          else if(nums[i]%2==0 && nums[j]%2==1){
             i++;
           }
-          if(nums[i]%2==0 && nums[j]%2==0){
+          else{ //bpth even
             i++;
           }
           
