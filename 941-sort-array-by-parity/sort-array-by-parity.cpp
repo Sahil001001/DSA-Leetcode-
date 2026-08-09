@@ -1,7 +1,10 @@
 class Solution {
 public:
-    void sortNums(vector<int>& nums){
-    
+
+    vector<int> sortArrayByParity(vector<int>& nums) {
+        if(nums.size()==1){
+            return nums;
+        }
         int i=0;
         int j = nums.size()-1;
     
@@ -21,15 +24,7 @@ public:
           else{ //bpth even
             i++;
           }
-          
         }
-
-    }
-    vector<int> sortArrayByParity(vector<int>& nums) {
-        if(nums.size()==1){
-            return nums;
-        }
-        sortNums(nums);
         return nums;
 
 
