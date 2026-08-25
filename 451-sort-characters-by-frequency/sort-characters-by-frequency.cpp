@@ -12,8 +12,8 @@ public:
         for(auto y : mp){
             v.push_back({y.second,y.first}); 
         }
-        sort(v.begin(),v.end());
-        reverse(v.begin(),v.end());
+        sort(v.rbegin(),v.rend());
+        
 
         for(auto k : v){
             int freq = k.first;
