@@ -8,7 +8,7 @@ public:
             int left = i;
             int right = i;
 //ODD
-           while((left>=0 && right<=s.length()) && s[left]==s[right] )
+           while(left>=0 && right<s.length() && s[left]==s[right] )
            {
             if(right-left+1 > maxLen){
                 start =  left;
@@ -20,8 +20,8 @@ public:
            }
              left = i;
              right = i+1;
-           
-           while(left>=0 && right<=s.length() && s[left]==s[right]){
+//EVEN           
+           while(left>=0 && right<s.length() && s[left]==s[right]){
             if(right-left+1 >maxLen){
                 start = left;
                 maxLen = right-left+1;
