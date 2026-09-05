@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int> spiralOrder(vector<vector<int>>&matrix) {
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
 
         vector<int> ans;
 
@@ -34,29 +34,25 @@ public:
 
             // bottom
 
-           
-            if(top<=bottom){
-                 j = right;
-            while (j >= left) {
-                ans.push_back(matrix[bottom][j]);
-                j--;
+            if (top <= bottom) {
+                j = right;
+                while (j >= left) {
+                    ans.push_back(matrix[bottom][j]);
+                    j--;
+                }
+                bottom--;
             }
-             bottom--;
-            }
-           
 
             // left
-            
-            if(left<=right){
-                i = bottom;
-            while (i >= top) {
-                ans.push_back(matrix[i][left]);
-                i--;
-            }
-             left++;
-            }
 
-           
+            if (left <= right) {
+                i = bottom;
+                while (i >= top) {
+                    ans.push_back(matrix[i][left]);
+                    i--;
+                }
+                left++;
+            }
         }
 
         return ans;
