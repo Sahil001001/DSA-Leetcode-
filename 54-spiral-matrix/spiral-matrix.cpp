@@ -34,25 +34,29 @@ public:
 
             // bottom
 
-            j = right;
+           
             if(top<=bottom){
+                 j = right;
             while (j >= left) {
                 ans.push_back(matrix[bottom][j]);
                 j--;
             }
+             bottom--;
             }
-            bottom--;
+           
 
             // left
-            i = bottom;
+            
             if(left<=right){
+                i = bottom;
             while (i >= top) {
                 ans.push_back(matrix[i][left]);
                 i--;
             }
+             left++;
             }
 
-            left++;
+           
         }
 
         return ans;
