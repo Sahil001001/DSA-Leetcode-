@@ -14,21 +14,23 @@ public:
                 }
             } 
             else {
-                if (ten == 0){
-                    if (five<3) return false;
-                    else{
-                        five-=3;
-                    }
-                }
+                
+               if(five==0) return false;
+               else if(ten>0){  //if 10
+                if(five==0) return false;
                 else{
-                    if(five==0){
-                        return false;
-                    }
-                    else{
-                        ten--;
-                        five--;
-                    }
+                    five--;
+                    ten--;
                 }
+               }
+               else{
+                if(five>=3){
+                    five-=3;
+                }else{
+                    return false;
+                }
+
+               }
                
             }
         }
